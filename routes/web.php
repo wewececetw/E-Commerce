@@ -42,7 +42,7 @@ Route::get('/checkout', CheckoutComponent::class)->name('checkout');
 
 //給使用者或是訪客
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
-    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard')->middleware('onlyauth');
 });
 
 //給管理者
