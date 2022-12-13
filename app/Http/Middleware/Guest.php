@@ -16,8 +16,7 @@ class Guest
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!session('utype')) {
-            session()->flush();
+        if ($request->session()->has('utype')) {
             return redirect()->route('home');
         } 
         return $next($request);
