@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class OnlyAuth
+class Guest
 {
     /**
      * Handle an incoming request.
@@ -16,11 +16,10 @@ class OnlyAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if (session('utype') === "USR") {
-            return $next($request);
-        } else {
-            return redirect()->route('login');
-        }
+        if (!session('utype')) {
+            session()->flush();
+            return redirect()->route('home');
+        } 
         return $next($request);
     }
 }
