@@ -17,10 +17,18 @@ class OnlyAuth
     public function handle(Request $request, Closure $next)
     {
         if (session('utype') === "USR") {
+
             return $next($request);
-        } else {
+
+        }  
+        
+        if(session('utype') === "ADM") {
+
+            return redirect()->route('home');
+            
+        } 
+            session()->flush();
             return redirect()->route('login');
-        }
-        return $next($request);
+
     }
 }
