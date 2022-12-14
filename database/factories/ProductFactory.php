@@ -15,7 +15,7 @@ class ProductFactory extends Factory
      */
 
     protected $model = Product::class;
-
+    
     public function definition()
     {
         $product_name = $this->faker->unique()->words($nd = 4, $asText = true);

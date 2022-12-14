@@ -15,7 +15,7 @@ class CategoryFactory extends Factory
      */
     protected $model = Category::class;
 
-    
+
     public function definition()
     {
         $category_name = $this->faker->unique()->words($nd=2,$asText=true);
