@@ -72,10 +72,10 @@
                                             <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
                                                 <li class="menu-item" >
-                                                    <a title="Dashboard" href="{{ Route('admin.dashboard') }}">Dashboard</a>
+                                                    <a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
                                                 </li>
 												<li class="menu-item" >
-													<a title="logout" href="{{ Route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+													<a title="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 												</li>
 												<form id="logout-form" method="POST" action="{{ route('logout') }}">
 													@csrf
@@ -87,10 +87,10 @@
                                             <a title="My Account" href="#">My Account ({{Auth::user()->name}})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="submenu curency" >
                                                 <li class="menu-item" >
-                                                    <a title="Dashboard" href="{{ Route('user.dashboard') }}">Dashboard</a>
+                                                    <a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
                                                 </li>
 												<li class="menu-item" >
-													<a title="logout" href="{{ Route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+													<a title="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 												</li>
 												<form id="logout-form" method="POST" action="{{ route('logout') }}">
 													@csrf
@@ -99,8 +99,8 @@
                                         </li>
                                         @endif
                                     @else
-                                        <li class="menu-item" ><a title="Register or Login" href="{{ Route('login') }}">Login</a></li>
-								        <li class="menu-item" ><a title="Register or Login" href="{{ Route('register') }}">Register</a></li>
+                                        <li class="menu-item" ><a title="Register or Login" href="{{ route('login') }}">Login</a></li>
+								        <li class="menu-item" ><a title="Register or Login" href="{{ route('register') }}">Register</a></li>
                                     @endif
                                 @endif
 							</ul>
@@ -195,19 +195,19 @@
 						<div class="container">
 							<ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu" >
 								<li class="menu-item home-icon">
-									<a href="{{ Route('home') }}" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
+									<a href="{{ route('home') }}" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
 								</li>
 								<li class="menu-item">
 									<a href="about-us.html" class="link-term mercado-item-title">About Us</a>
 								</li>
 								<li class="menu-item">
-									<a href="{{ Route('shop') }}" class="link-term mercado-item-title">Shop</a>
+									<a href="{{ route('shop') }}" class="link-term mercado-item-title">Shop</a>
 								</li>
 								<li class="menu-item">
-									<a href="{{ Route('cart') }}" class="link-term mercado-item-title">Cart</a>
+									<a href="{{ route('cart') }}" class="link-term mercado-item-title">Cart</a>
 								</li>
 								<li class="menu-item">
-									<a href="{{ Route('checkout') }}" class="link-term mercado-item-title">Checkout</a>
+									<a href="{{ route('checkout') }}" class="link-term mercado-item-title">Checkout</a>
 								</li>
 								<li class="menu-item">
 									<a href="contact-us.html" class="link-term mercado-item-title">Contact Us</a>
