@@ -24,6 +24,18 @@ class CartComponent extends Component
     }
 
 
+    public function destroy($rowId)
+    {
+        Cart::remove($rowId);
+        session()->flash('success_message','商品刪除成功');
+    }
+
+    public function destroyAll()
+    {
+        //當購物車被清空
+        Cart::destroy();
+    }
+
     public function render()
     {
         return view('livewire.cart-component')->layout('layouts.base');

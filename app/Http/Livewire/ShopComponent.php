@@ -12,7 +12,7 @@ class ShopComponent extends Component
     {
         //當更新一個 belongsTo 關聯時，你可以使用 associate 方法。此方法會設定外鍵至下層模型：
         Cart::add($product_id, $product_name, 1, $product_price)->associate('App\Models\Product');
-        session()->flash('success_message','商品增加到購物車');
+        session()->flash('success_message','商品成功加到購物車');
         return redirect()->route('product.cart');
     }
     public function render()
