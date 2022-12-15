@@ -16,6 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
+	
+	<script src="{{ asset('assets/js/jquery-3.6.2.min.js') }}"></script>
     @livewireStyles
 </head>
 <body class="home-page home-01 ">

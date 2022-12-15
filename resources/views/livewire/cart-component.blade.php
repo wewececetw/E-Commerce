@@ -54,10 +54,10 @@
 				<div class="summary">
 					<div class="order-summary">
 						<h4 class="title-box">Order Summary</h4>
-						<p class="summary-info"><span class="title">Subtotal</span><b class="index">${{Cart::subtotal()}}</b></p>
-						<p class="summary-info"><span class="title">Tax</span><b class="index">${{Cart::tax()}}</b></p>
+						<?php /* <p class="summary-info"><span class="title">Tax</span><b class="index">${{Cart::tax()}}</b></p> */ ?>
 						<p class="summary-info"><span class="title">Shipping</span><b class="index">Free Shipping</b></p>
-						<p class="summary-info total-info "><span class="title">Total</span><b class="index">${{Cart::Total()}}</b></p>
+						<p class="summary-info"><span class="title">Total</span><b class="index">${{Cart::subtotal()}}</b></p>
+						<?php /* <p class="summary-info total-info "><span class="title">Total</span><b class="index">${{Cart::Total()}}</b></p> */ ?>
 					</div>
 					<div class="checkout-info">
 						<label class="checkbox-field">
