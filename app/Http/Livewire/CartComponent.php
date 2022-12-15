@@ -27,13 +27,16 @@ class CartComponent extends Component
     public function destroy($rowId)
     {
         Cart::remove($rowId);
-        session()->flash('success_message','商品刪除成功');
+       
+        return redirect(request()->header('Referer'))->with('success_message', '商品刪除成功'); 
     }
 
     public function destroyAll()
     {
         //當購物車被清空
         Cart::destroy();
+
+        return redirect(request()->header('Referer'))->with('success_message', '商品刪除成功'); 
     }
 
     public function render()
